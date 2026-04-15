@@ -1,0 +1,15 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "olivier site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[200~https://github.com/NIYIGENAOlivier2025/oliviersite~"
+  },
+  "author": "olivier pro",
+  "license": "ISC"
+}
