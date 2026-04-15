@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olivier</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  display:flex;
+  background:#0f172a;
+  color:white;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:230px;
+  height:100vh;
+  background:#020617;
+  padding:20px;
+  position:fixed;
+}
+
+.sidebar h2{
+  color:#38bdf8;
+  margin-bottom:20px;
+}
+
+.sidebar a{
+  display:block;
+  color:#94a3b8;
+  margin:10px 0;
+  text-decoration:none;
+  padding:8px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  background:#38bdf8;
+  color:black;
+}
+
+/* MAIN */
+.main{
+  margin-left:250px;
+  padding:30px;
+  width:100%;
+}
+
+/* HEADER */
+.header{
+  font-size:28px;
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+/* GRID COLUMN SYSTEM */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:20px;
+}
+
+/* CARDS */
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* COLUMN SIZES */
+.col-4{ grid-column: span 4; }
+.col-6{ grid-column: span 6; }
+.col-8{ grid-column: span 8; }
+.col-12{ grid-column: span 12; }
+
+/* PROFILE */
+.profile{
+  text-align:center;
+}
+
+.profile img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:3px solid #38bdf8;
+}
+
+/* SKILLS */
+.bar{
+  background:#334155;
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:10px;
+}
+
+.bar span{
+  display:block;
+  height:10px;
+  background:#38bdf8;
+}
+
+/* PROJECT GRID */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.project{
+  background:#0f172a;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* BUTTON */
+.btn{
+  padding:10px;
+  border:none;
+  background:#38bdf8;
+  border-radius:6px;
+  cursor:pointer;
+  color:black;
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+  .sidebar{
+    display:none;
+  }
+  .main{
+    margin:0;
+  }
+}
+/* CONTACT DESIGN */
+.contact-box{
+  background:#0f172a;
+  padding:12px;
+  border-radius:8px;
+  margin:10px 0;
+  transition:0.3s;
+}
+
+.contact-box:hover{
+  transform:scale(1.03);
+  background:#1e293b;
+}
+
+.contact-box p{
+  font-weight:bold;
+  color:#38bdf8;
+}
+
+.contact-box span{
+  color:#cbd5f5;
+  font-size:14px;
+}
+
+/* SOCIAL LINKS */
+.social-links a{
+  display:inline-block;
+  margin-right:10px;
+  color:#38bdf8;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.social-links a:hover{
+  color:white;
+}
+h3{
+  margin-bottom:10px;
+  color:#38bdf8;
+}
+
+p{
+  line-height:1.6;
+  color:#cbd5f5;
+}
+
+.card{
+  line-height:1.6;
+}
+.footer{
+  margin-top:40px;
+  background:#020617;
+  padding:30px;
+  text-align:center;
+}
+
+.footer h2{
+  color:#38bdf8;
+  margin-bottom:10px;
+}
+
+.footer p{
+  color:#94a3b8;
+}
+
+.footer-links{
+  margin:15px 0;
+}
+
+.footer-links a{
+  margin:0 10px;
+  color:#38bdf8;
+  text-decoration:none;
+}
+
+.footer-links a:hover{
+  color:white;
+}
+
+.footer-social a{
+  margin:10px;
+  font-size:20px;
+  color:#38bdf8;
+}
+
+.copy{
+  margin-top:15px;
+  font-size:13px;
+}
+h4{
+  margin-top:15px;
+  color:#38bdf8;
+}
+
+.bar{
+  margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2><b><menu>Menu</menu></b></h2>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="header"> <b>Olivier</b></div>
+
+<div class="grid">
+
+  <!-- PROFILE -->
+  <div class="card col-4 profile">
+    <h3>Profile</h3>
+    <img src="olivier.jpg">
+    <p id="typing"></p>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="card col-8">
+    <h3>About Me</h3>
+    <p>
+      I'm Olivier, a passionate Full-Stack Developer creating modern,
+      responsive and interactive applications with clean UI and powerful backend.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+ <!-- SKILLS -->
+<div id="skills" class="card col-6">
+  <h3>Technical Skills</h3>
+
+  <!-- FRONTEND -->
+  <h4>Frontend</h4>
+  <p>HTML</p>
+  <div class="bar"><span style="width:90%"></span></div>
+
+  <p>CSS (Animations, Responsive)</p>
+  <div class="bar"><span style="width:85%"></span></div>
+
+  <p>JavaScript</p>
+  <div class="bar"><span style="width:80%"></span></div>
+
+  <p>React.js</p>
+  <div class="bar"><span style="width:75%"></span></div>
+
+  <!-- BACKEND -->
+  <h4>Backend</h4>
+  <p>Node.js</p>
+  <div class="bar"><span style="width:80%"></span></div>
+
+  <p>Express.js</p>
+  <div class="bar"><span style="width:75%"></span></div>
+
+  <!-- PYTHON -->
+  <h4>Python & Frameworks</h4>
+  <p>Python</p>
+  <div class="bar"><span style="width:70%"></span></div>
+
+  <p>Django</p>
+  <div class="bar"><span style="width:65%"></span></div>
+
+  <!-- BLOCKCHAIN -->
+  <h4>Blockchain</h4>
+  <p>Blockchain Development</p>
+  <div class="bar"><span style="width:65%"></span></div>
+
+  <p>Smart Contracts (Solidity)</p>
+  <div class="bar"><span style="width:60%"></span></div>
+
+</div>
+
+  <!-- CONTACT -->
+  <!-- CONTACT -->
+<div id="contact" class="card col-6">
+  <h3>Contact Me</h3>
+
+  <div class="contact-box">
+    <p>📧 Email</p>
+    <span>olivierniyigena135@gmail.com</span>
+  </div>
+
+  <div class="contact-box">
+    <p>📱 Phone</p>
+    <span>+250 796 841 381</span>
+  </div>
+
+  <div class="contact-box">
+    <p>📍 Location</p>
+    <span>Western, Rutsiro</span>
+  </div>
+
+  <div class="contact-box">
+    <p>🌐 Social platform</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/O.l.y_one_" target="_blank">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="">GitHub</a>
+    </div>
+  </div>
+
+  <button class="btn">Send Message</button>
+</div>
+
+  <!-- PROJECTS -->
+  <div id="projects" class="card col-12">
+    <h3>Projects</h3>
+
+    <div class="projects">
+      <div class="project">
+        <h4>Landing Page</h4>
+        <p>Modern UI design</p>
+      </div>
+
+      <div class="project">
+        <h4>Portfolio</h4>
+        <p>Animated portfolio</p>
+      </div>
+
+      <div class="project">
+        <h4>Web App</h4>
+        <p>Interactive system</p>
+      </div>
+
+      <div class="project">
+        <h4>E-commerce</h4>
+        <p>Full-stack store</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<footer class="footer">
+  <div class="footer-content">
+
+    <h2>Olivier</h2>
+    <p>Building modern web experiences with creativity & passion.</p>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="#">🌐 social media</a>
+      <a href="#">📘 Phone </a>
+      <a href="#">📸 Profile</a>
+      <a href="#">💼 Email</a>
+    </div>
+
+    <p class="copy">© 2026 Olivier | All Rights Reserved</p>
+
+  </div>
+</footer>
+
+</div>
+
+<script>
+
+/* TYPING EFFECT */
+const words=["Full-Stack Developer","UI Designer","Problem Solver"];
+let i=0,j=0,current="",deleting=false;
+
+function type(){
+  current=words[i];
+  if(!deleting){
+    document.getElementById("typing").innerHTML=current.substring(0,j++);
+    if(j>current.length){
+      deleting=true;
+      setTimeout(type,1000);
+      return;
+    }
+  }else{
+    document.getElementById("typing").innerHTML=current.substring(0,j--);
+    if(j==0){
+      deleting=false;
+      i=(i+1)%words.length;
+    }
+  }
+  setTimeout(type,100);
+}
+
+type();
+
+</script>
+
+</body>
+</html>
