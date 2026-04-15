@@ -4,11 +4,11 @@
   "description": "olivier site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "build": "echo Building project..."
+},
   "repository": {
     "type": "git",
-    "url": "\u001b[200~https://github.com/NIYIGENAOlivier2025/oliviersite~"
+    "url": "https://github.com/NIYIGENAOlivier2025/oliviersite.git"
   },
   "author": "olivier pro",
   "license": "ISC"
